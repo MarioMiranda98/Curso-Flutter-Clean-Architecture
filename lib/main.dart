@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/dependency_injection.dart';
 import 'package:flutter_clean_architecture/src/features/products/presentation/screens/home/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dependencyInjection();
   runApp(const MyApp());
 }
 
